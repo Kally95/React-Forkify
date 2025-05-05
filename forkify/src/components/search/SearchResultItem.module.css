@@ -1,0 +1,55 @@
+.search-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+  cursor: pointer;
+  border-bottom: black solid 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.search-results-list__item {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.search-result-item__image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.search-result-item__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.search-result-item__title {
+  font-weight: bold;
+  color: #e63946;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-result-item__publisher {
+  color: #888;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-result-item__action {
+  margin-left: 0.5rem;
+}

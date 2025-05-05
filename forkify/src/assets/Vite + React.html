@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh"
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="./Vite + React_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/index.css">:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/App.css">#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/components/header/Header.module.css">._main-header_qyh72_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: whitesmoke;
+}
+
+._main-header-logo_qyh72_21 {
+  width: 300px;
+  height: 100px;
+}
+
+._main-header__search-form_qyh72_31 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+._main-header__search-form-input_qyh72_47 {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: whitesmoke;
+  font-size: 1rem;
+  color: #242424;
+}
+
+._main-header__nav-items_qyh72_69 {
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  justify-content: flex-end;
+  color: #574945;
+}
+
+._main-header__nav-list_qyh72_85 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+._main-header__nav-list_qyh72_85 li {
+  list-style: none;
+}
+
+._main-header__nav-btn_qyh72_111 {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+._main-header__nav-btn_qyh72_111:hover {
+  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+  color: whitesmoke;
+}
+
+._main-header__search-form-btn_qyh72_151 {
+  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+}
+
+._dropdown_qyh72_159 {
+  position: relative;
+  display: inline-block;
+}
+
+._dropdown-menu_qyh72_169 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+._dropdown-menu_qyh72_169 a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+._dropdown-menu_qyh72_169 a:hover {
+  background-color: #f5f5f5;
+}
+
+._dropdown_qyh72_159:hover ._dropdown-menu_qyh72_169 {
+  display: block;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/components/search/SearchResultItem.module.css">._search-result-item_1hn7t_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+  cursor: pointer;
+  border-bottom: black solid 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+._search-results-list__item_1hn7t_23 {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+._search-result-item__image_1hn7t_33 {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+._search-result-item__info_1hn7t_49 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+._search-result-item__title_1hn7t_63 {
+  font-weight: bold;
+  color: #e63946;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+._search-result-item__publisher_1hn7t_85 {
+  color: #888;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+._search-result-item__action_1hn7t_105 {
+  margin-left: 0.5rem;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/App.module.css">._main-container_q8xfx_1 {
+  width: 100%;
+  min-height: 100vh;
+}
+
+._header-wrapper_q8xfx_11 {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+._main-content_q8xfx_21 {
+  display: flex;
+  height: calc(100vh - 100px);
+  width: 100%;
+  overflow: hidden;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/components/search/SearchResults.module.css">._search-results_150u9_1 {
+  width: 20rem;
+  height: 100%;
+  background-color: whitesmoke;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: 2rem;
+}
+
+._search-results__message_150u9_19 {
+  color: #242424;
+  font-size: 2rem;
+}
+
+._search-results__error_150u9_29 {
+  color: orangered;
+  font-size: 2rem;
+}
+
+._search-results-list_150u9_39 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+._spinner_150u9_51 {
+  animation: _spin_150u9_51 1s linear infinite;
+  font-size: 5rem;
+  color: #e63946;
+}
+
+@keyframes _spin_150u9_51 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/components/pagination/Pagination.module.css">/* Pagination.module.css */
+
+._pagination-container_1hgmb_5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  overflow: visible;
+  flex-wrap: wrap;
+}
+
+._pagination-button_1hgmb_27 {
+  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+  color: white;
+  border: none;
+  padding: 2rem;
+
+  height: 40px;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+._pagination-button_1hgmb_27:hover:not(:disabled) {
+  background-color: #333;
+}
+
+._pagination-button_1hgmb_27:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+._pagination-button_1hgmb_27._active_1hgmb_79 {
+  background-color: red;
+  font-weight: bold;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Ali/OneDrive/Desktop/React-Forkify/forkify/src/components/recipe/RecipeDetails.module.css">._recipe-details-main_gvm2i_1 {
+  width: 100%;
+  flex: 1;
+  max-width: none;
+  overflow-y: auto;
+  padding: 2rem;
+  color: #e63946;
+  background-color: whitesmoke;
+}
+
+._recipe-details-figure_gvm2i_21 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+._recipe-image_gvm2i_33 {
+  width: 100%;
+  height: 500px;
+  display: block;
+  border-radius: 12px;
+}
+
+._recipe-title-overlay_gvm2i_47 {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+._recipe-details_gvm2i_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 2rem;
+}
+
+._recipe-details-info_gvm2i_87 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+._icon_gvm2i_101 {
+  font-size: 2rem;
+}
+
+._servings-controls_gvm2i_109 {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+._icon-button_gvm2i_121 {
+  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+._icon-button_gvm2i_121:hover {
+  background: #ccc;
+}
+
+._no-recipe_gvm2i_145 {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  color: #ccc;
+}
+
+._recipe-details-ingredient_gvm2i_161 {
+  max-height: 400px;
+  margin-top: 2rem;
+}
+
+._ingredient-list_gvm2i_171 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+._ingredient-list_gvm2i_171 li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #e63946;
+}
+
+._icon-button-bookmark_gvm2i_203 {
+  all: unset;
+  cursor: pointer;
+}
+</style></head>
+  <body cz-shortcut-listen="true">
+    <div id="root"><div class="_main-container_q8xfx_1"><div class="_header-wrapper_q8xfx_11"><header class="_main-header_qyh72_1"><img class="_main-header-logo_qyh72_21" alt="Forkify&#39;s logo of a fork and spoon" src="./Vite + React_files/logo.png"><form class="_main-header__search-form_qyh72_31" action="javascript:throw new Error(&#39;A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\&#39;re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().&#39;)"><input class="_main-header__search-form-input_qyh72_47" placeholder="Search recipes..." type="text" name="query"><button class="_main-header__search-form-btn_qyh72_151"><span>SEARCH</span> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg></button></form><nav class="_main-header__nav-items_qyh72_69"><ul class="_main-header__nav-list_qyh72_85"><li><button class="_main-header__nav-btn_qyh72_111 undefined"><span>ADD RECIPE</span> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path></svg></button></li><li><div class="_dropdown_qyh72_159"><button class="_main-header__nav-btn_qyh72_111 undefined"><span>BOOKMARKS</span> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 48C0 21.5 21.5 0 48 0l0 48 0 393.4 130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4 336 48 48 48 48 0 336 0c26.5 0 48 21.5 48 48l0 440c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488L0 48z"></path></svg></button><div class="_dropdown-menu_qyh72_169"><ul><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Spicy Asian Chicken With Brussels Sprouts" src="./Vite + React_files/chickenricebowl_300cd18af72.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Spicy Asian Chicken With Brussels Sprouts</p><p class="_search-result-item__publisher_1hn7t_85">Real Simple</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Cheddar Jalapeno Chicken Burgers with Guacamole" src="./Vite + React_files/CheddarJalapenoChickenBurgerswithGuacamole4fdb.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Cheddar Jalapeno Chicken Burgers with Guacamole</p><p class="_search-result-item__publisher_1hn7t_85">What's Gaby Cooking</p></div></div></li></ul></div></div></li></ul></nav></header></div><div class="_main-content_q8xfx_21"><section class="_search-results_150u9_1"><ul class="_search-results-list_150u9_39"><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Spicy Asian Chicken With Brussels Sprouts" src="./Vite + React_files/chickenricebowl_300cd18af72.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Spicy Asian Chicken With Brussels Sprouts</p><p class="_search-result-item__publisher_1hn7t_85">Real Simple</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Cheddar Jalapeno Chicken Burgers with Guacamole" src="./Vite + React_files/CheddarJalapenoChickenBurgerswithGuacamole4fdb.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Cheddar Jalapeno Chicken Burgers with Guacamole</p><p class="_search-result-item__publisher_1hn7t_85">What's Gaby Cooking</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Moroccan chicken with sweet potato mash" src="./Vite + React_files/764636_MEDIUMb29c.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Moroccan chicken with sweet potato mash</p><p class="_search-result-item__publisher_1hn7t_85">BBC Good Food</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Whole roasted masala chicken and potatoes" src="./Vite + React_files/whole_roasted_masala_77631_16x9ee01.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Whole roasted masala chicken and potatoes</p><p class="_search-result-item__publisher_1hn7t_85">BBC Food</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Cha Cha&#39;s White Chicken Chili" src="./Vite + React_files/631578cc71.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Cha Cha's White Chicken Chili</p><p class="_search-result-item__publisher_1hn7t_85">All Recipes</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of BBQ Chicken with Pineapple Bacon Salsa" src="./Vite + React_files/BBQChickenwithPineappleBaconSalsa3bc8c.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">BBQ Chicken with Pineapple Bacon Salsa</p><p class="_search-result-item__publisher_1hn7t_85">Two Peas and Their Pod</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Five-Star Buffalo Chicken Dip" src="./Vite + React_files/703537dd3.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Five-Star Buffalo Chicken Dip</p><p class="_search-result-item__publisher_1hn7t_85">All Recipes</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of The king of casseroles: King Ranch Chicken" src="./Vite + React_files/kingranchDSC_7415eb00e50e.JPG"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">The king of casseroles: King Ranch Chicken</p><p class="_search-result-item__publisher_1hn7t_85">Homesick Texan</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of CPK’s BBQ Chicken Pizza" src="./Vite + React_files/4433733640_8b0a5d19fbace0.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">CPK’s BBQ Chicken Pizza</p><p class="_search-result-item__publisher_1hn7t_85">The Pioneer Woman</p></div></div></li><li><div class="_search-result-item_1hn7t_1"><img class="_search-result-item__image_1hn7t_33" alt="An image of Grilled Chicken &amp;amp; Pineapple Quesadilla" src="./Vite + React_files/4613295867_09ee730bcf1c408.jpg"><div class="_search-result-item__info_1hn7t_49"><p class="_search-result-item__title_1hn7t_63">Grilled Chicken &amp;amp; Pineapple Quesadilla</p><p class="_search-result-item__publisher_1hn7t_85">The Pioneer Woman</p></div></div></li></ul><div class="_pagination-container_1hgmb_5"><button class="_pagination-button_1hgmb_27" disabled="">&lt;</button><button class="_pagination-button_1hgmb_27">&gt;</button></div></section><main class="_recipe-details-main_gvm2i_1" style="
+    width: 100%;
+"><figure class="_recipe-details-figure_gvm2i_21"><img alt="A picture of Whole roasted masala chicken and potatoes" class="_recipe-image_gvm2i_33" src="./Vite + React_files/whole_roasted_masala_77631_16x9ee01.jpg"><figcaption class="_recipe-title-overlay_gvm2i_47">Whole roasted masala chicken and potatoes</figcaption></figure><section class="_recipe-details_gvm2i_1"><div class="_recipe-details-info_gvm2i_87"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="_icon_gvm2i_101" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 456c-110.3 0-200-89.7-200-200 0-54.8 21.7-105.9 61.2-144 6.4-6.2 16.6-6 22.7.4 6.2 6.4 6 16.6-.4 22.7-33.1 32-51.3 74.9-51.3 120.9 0 92.5 75.3 167.8 167.8 167.8S423.8 348.5 423.8 256c0-87.1-66.7-159-151.8-167.1v62.6c0 8.9-7.2 16.1-16.1 16.1s-16.1-7.2-16.1-16.1V72.1c0-8.9 7.2-16.1 16.1-16.1 110.3 0 200 89.7 200 200S366.3 456 256 456z"></path><path d="M175.9 161.9l99.5 71.5c13.5 9.7 16.7 28.5 7 42s-28.5 16.7-42 7c-2.8-2-5.2-4.4-7-7l-71.5-99.5c-3.2-4.5-2.2-10.8 2.3-14 3.6-2.6 8.3-2.4 11.7 0z"></path></svg><span>90 mins</span></div><div class="_recipe-details-info_gvm2i_87"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="_icon_gvm2i_101" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg><span>4 servings</span><div class="_servings-controls_gvm2i_109"><button class="_icon-button_gvm2i_121"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button><button class="_icon-button_gvm2i_121"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button></div></div><button class="_icon-button-bookmark_gvm2i_203"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M336 0H48C21.49 0 0 21.49 0 48v464l192-112 192 112V48c0-26.51-21.49-48-48-48zm0 428.43l-144-84-144 84V54a6 6 0 0 1 6-6h276c3.314 0 6 2.683 6 5.996V428.43z"></path></svg></button></section><div class="_recipe-details-ingredient_gvm2i_161"><h3>RECIPE INGREDIENTS</h3><ul class="_ingredient-list_gvm2i_171"><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>4 tbsps lemon juice</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>2 tbsps peeled finely chopped root ginger</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>2 tbsps finely chopped or crushed garlic</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>3  hot green chillies</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp salt</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp ground coriander</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp garam masala</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 g whole chicken</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp chilli powder</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp freshly ground black pepper</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>6 tbsps olive or sunflower oil</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>5  medium potatoes</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp of salt</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp freshly ground black pepper</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp ground coriander</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp ground cumin</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp turmeric</span></li><li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><span>1 tsp kashmiri chilli powder</span></li></ul></div></main></div></div></div>
+    <script type="module" src="./Vite + React_files/main.jsx"></script>
+  
+
+</body></html>

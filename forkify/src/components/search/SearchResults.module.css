@@ -1,0 +1,39 @@
+.search-results {
+  width: 20rem;
+  height: 100%;
+  background-color: whitesmoke;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: 2rem;
+}
+
+.search-results__message {
+  color: #242424;
+  font-size: 2rem;
+}
+
+.search-results__error {
+  color: orangered;
+  font-size: 2rem;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  font-size: 5rem;
+  color: #e63946;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
