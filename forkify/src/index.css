@@ -28,6 +28,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+  font-family: "Nunito Sans", sans-serif;
 }
 
 h1 {

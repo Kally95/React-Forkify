@@ -1,17 +1,17 @@
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import classes from "./RecipeDetails.module.css";
-import { RecipesContext } from "../../contexts/RecipesContext";
+import { FaSpinner } from "react-icons/fa6";
 import { IoIosTimer } from "react-icons/io";
 import { MdPeople } from "react-icons/md";
 import Fraction from "fraction.js";
 import { FaMinus, FaBookmark, FaRegBookmark, FaPlus } from "react-icons/fa";
-
+import { useRecipe } from "../../contexts/RecipesContextProvider";
 function formatQuantity(qty) {
   return qty ? new Fraction(qty).toFraction(true) : "";
 }
 
 export default function RecipeDetails() {
-  const { currentRecipe, bookmarks, setBookmarks } = useContext(RecipesContext);
+  const { currentRecipe, bookmarks, setBookmarks, isLoading } = useRecipe();
   const [baseServings, setBaseServings] = useState();
   const [servings, setServings] = useState();
 
@@ -23,6 +23,14 @@ export default function RecipeDetails() {
       setServings(currentRecipe.servings);
     }
   }, [currentRecipe]);
+
+  if (isLoading) {
+    return (
+      <section className={classes["search-results"]}>
+        <FaSpinner className={classes.spinner} />
+      </section>
+    );
+  }
 
   if (!currentRecipe) {
     return (

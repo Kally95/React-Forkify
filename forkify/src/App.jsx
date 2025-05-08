@@ -6,15 +6,15 @@ import RecipeDetails from "./components/recipe/RecipeDetails";
 import { ModalProvider } from "./contexts/ModalContextProvider";
 import AddRecipeModal from "./components/modal/AddRecipeModal";
 import SuccessModal from "./components/modal/SuccessModal";
+import "./index.css";
+
 function App() {
   return (
     <>
       <RecipeProvider>
         <ModalProvider>
           <div className={classes["main-container"]}>
-            <div className={classes["header-wrapper"]}>
-              <Header />
-            </div>
+            <Header />
             <div className={classes["main-content"]}>
               <SearchResults />
               <RecipeDetails />

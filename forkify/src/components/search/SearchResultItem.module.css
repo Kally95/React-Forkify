@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem;
   gap: 1rem;
   cursor: pointer;
-  border-bottom: black solid 0.5px;
-  margin-bottom: 0.5rem;
+}
+.search-result-item:hover {
+  background: #e6394754;
 }
 
 .search-results-list__item {
@@ -52,4 +53,8 @@
 
 .search-result-item__action {
   margin-left: 0.5rem;
+}
+
+.active {
+  background-color: #e6394754;
 }

@@ -1,13 +1,15 @@
 import classes from "./SearchResultItem.module.css";
 import { RecipesContext } from "../../contexts/RecipesContext";
-import { useContext } from "react";
+import { useRecipe } from "../../contexts/RecipesContextProvider";
 
 export default function SearchResultItem({ id, image, publisher, title }) {
-  const { fetchRecipeById } = useContext(RecipesContext);
+  const { fetchRecipeById, currentRecipe } = useRecipe(RecipesContext);
 
   return (
     <div
-      className={classes["search-result-item"]}
+      className={`${classes["search-result-item"]} ${
+        currentRecipe?.id === id ? classes["active"] : ""
+      }`}
       onClick={() => fetchRecipeById(id)}
     >
       <img

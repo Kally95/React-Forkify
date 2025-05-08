@@ -2,15 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   gap: 2rem;
   padding: 1rem;
   background-color: whitesmoke;
 }
 
-.main-header-logo {
-  width: 300px;
-  height: 100px;
+.main-header-title {
+  font-family: "Dancing Script", cursive;
+  color: #f48982;
 }
 
 .main-header__search-form {
@@ -83,10 +82,10 @@
 }
 
 .dropdown-menu {
-  display: none;
+  display: flex;
+  justify-content: center;
   position: absolute;
-  top: 100%;
-  left: 0;
+
   background-color: white;
   border: 1px solid #ddd;
   min-width: 160px;
@@ -94,11 +93,16 @@
   z-index: 1000;
 }
 
-.dropdown-menu a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
+.dropdown-menu-list {
+  padding: 0;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  z-index: 1000;
 }
 
 .dropdown-menu a:hover {
@@ -107,4 +111,9 @@
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+.dropdown-menu-empty {
+  font-size: 1rem;
+  width: 400px;
 }

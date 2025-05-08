@@ -1,14 +1,15 @@
-import { FaMagnifyingGlass, FaRegBookmark, FaBookmark } from "react-icons/fa6";
+import { FaMagnifyingGlass, FaRegBookmark } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
-import logo from "../../assets/logo.png";
 import classes from "./Header.module.css";
 import { useContext } from "react";
 import { RecipesContext } from "../../contexts/RecipesContext";
 import SearchResultItem from "../search/SearchResultItem";
 import { useModal } from "../../contexts/ModalContextProvider";
+
 export default function Header() {
   const { fetchData, bookmarks } = useContext(RecipesContext);
   const { openModal } = useModal();
+
   function handleRecipeSearch(formData) {
     const query = formData.get("query");
     if (!query) return;
@@ -19,11 +20,9 @@ export default function Header() {
 
   return (
     <header className={classes["main-header"]}>
-      <img
-        className={classes["main-header-logo"]}
-        src={logo}
-        alt="Forkify's logo of a fork and spoon"
-      />
+      <h1 className={classes["main-header-title"]}>
+        <span>TheBigMenu</span>
+      </h1>
 
       <form
         className={classes["main-header__search-form"]}
@@ -59,7 +58,7 @@ export default function Header() {
               </button>
 
               <div className={classes["dropdown-menu"]}>
-                {bookmarks && (
+                {bookmarks?.length > 0 ? (
                   <ul className={classes["dropdown-menu-list"]}>
                     {bookmarks.map((b) => (
                       <li key={b.id}>
@@ -72,6 +71,10 @@ export default function Header() {
                       </li>
                     ))}
                   </ul>
+                ) : (
+                  <div className={classes["dropdown-menu-empty"]}>
+                    <p>No bookmarks yet!</p>
+                  </div>
                 )}
               </div>
             </div>

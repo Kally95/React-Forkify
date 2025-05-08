@@ -1,24 +1,15 @@
 import classes from "./SearchResults.module.css";
-import { useContext, useState } from "react";
-import { RecipesContext } from "../../contexts/RecipesContext";
+import { useState } from "react";
 import { GoSmiley } from "react-icons/go";
-import { FaSpinner } from "react-icons/fa6";
 import SearchResultItem from "./SearchResultItem";
 import { PiSmileySad } from "react-icons/pi";
 import Pagination from "../pagination/Pagination";
+import { useRecipe } from "../../contexts/RecipesContextProvider";
 
 export default function SearchResults() {
-  const { data: recipes, error, isLoading } = useContext(RecipesContext);
+  const { data: recipes, error } = useRecipe();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-
-  if (isLoading) {
-    return (
-      <section className={classes["search-results"]}>
-        <FaSpinner className={classes.spinner} />
-      </section>
-    );
-  }
 
   if (error) {
     return <p>Something went wrong, try again!</p>;
@@ -38,7 +29,9 @@ export default function SearchResults() {
       {recipes && recipes.length === 0 && (
         <p className={classes["search-results__message"]}>
           Oops, we couldn’t find any recipes matching your search{" "}
-          <PiSmileySad />
+          <span>
+            <PiSmileySad />
+          </span>
         </p>
       )}
       <ul className={classes["search-results-list"]}>
